@@ -27,6 +27,30 @@ namespace prySandrinIE
                 
             
         }
+
+        private void barraDeCarga_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void reloj_Tick(object sender, EventArgs e)
+        {
+            if (barraDeCarga.Value ==100)
+            {
+                //apago el reloj 
+                reloj.Enabled = false;
+                this.Hide();
+                frmPrincipal venta = new frmPrincipal();
+                venta.ShowDialog();
+                    
+            }
+            else
+            {
+                barraDeCarga.Value += 5;
+                    
+            }
+
+        }
     }
 }
     

@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmListarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListarProveedor.Designer.cs">
+      <DependentUpon>frmListarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmListarProveedor.resx">
+      <DependentUpon>frmListarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogo.resx">
       <DependentUpon>frmLogo.cs</DependentUpon>
     </EmbeddedResource>
