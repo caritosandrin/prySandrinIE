@@ -64,7 +64,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySandrinIE.Properties.Resources.LOGO;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(414, 422);
+            this.ClientSize = new System.Drawing.Size(438, 422);
             this.Controls.Add(this.barraDeCarga);
             this.Controls.Add(this.btniniciar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
