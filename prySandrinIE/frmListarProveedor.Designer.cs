@@ -37,7 +37,7 @@
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblDatos = new System.Windows.Forms.Label();
+            this.lblMostrar = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -99,23 +99,24 @@
             this.Column4.HeaderText = "Liquidado Responsable";
             this.Column4.Name = "Column4";
             // 
-            // lblDatos
+            // lblMostrar
             // 
-            this.lblDatos.AutoSize = true;
-            this.lblDatos.Location = new System.Drawing.Point(24, 34);
-            this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(35, 13);
-            this.lblDatos.TabIndex = 12;
-            this.lblDatos.Text = "label1";
+            this.lblMostrar.AutoSize = true;
+            this.lblMostrar.Location = new System.Drawing.Point(24, 34);
+            this.lblMostrar.Name = "lblMostrar";
+            this.lblMostrar.Size = new System.Drawing.Size(35, 13);
+            this.lblMostrar.TabIndex = 12;
+            this.lblMostrar.Text = "label1";
             // 
             // frmListarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(809, 450);
-            this.Controls.Add(this.lblDatos);
+            this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmListarProveedor";
+            this.Load += new System.EventHandler(this.frmListarProveedor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -133,6 +134,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblMostrar;
     }
 }

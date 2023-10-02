@@ -71,6 +71,7 @@
             this.Name = "frmlogo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de gestion";
+            this.Load += new System.EventHandler(this.frmlogo_Load);
             this.ResumeLayout(false);
 
         }
