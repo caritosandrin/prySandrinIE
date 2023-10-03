@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCargaProveedores));
             this.lblNº = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +55,7 @@
             this.lblJurusdiccion = new System.Windows.Forms.Label();
             this.lblDireccion = new System.Windows.Forms.Label();
             this.lblLiquidador = new System.Windows.Forms.Label();
+            this.btnLimpiar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -263,12 +265,23 @@
             this.lblLiquidador.TabIndex = 17;
             this.lblLiquidador.Text = "Liquidador:";
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Location = new System.Drawing.Point(12, 225);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(94, 29);
+            this.btnLimpiar.TabIndex = 18;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
             // frmCargaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1135, 298);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.lblLiquidador);
             this.Controls.Add(this.lblDireccion);
             this.Controls.Add(this.lblJurusdiccion);
@@ -287,6 +300,7 @@
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.dgvDatos);
             this.Controls.Add(this.lblNº);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCargaProveedores";
             this.Text = "Carga Proveedores";
             this.Load += new System.EventHandler(this.frmCargaProveedores_Load);
@@ -324,5 +338,6 @@
         private System.Windows.Forms.Label lblJurusdiccion;
         private System.Windows.Forms.Label lblDireccion;
         private System.Windows.Forms.Label lblLiquidador;
+        private System.Windows.Forms.Button btnLimpiar;
     }
 }

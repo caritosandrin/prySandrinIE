@@ -97,5 +97,10 @@ namespace prySandrinIE
 
             MessageBox.Show("Registro Realizado");
         }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            dgvDatos.Rows.Clear();
+        }
     }
 }

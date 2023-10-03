@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegistroProveedorSeguro));
             this.btnTreeNivel1 = new System.Windows.Forms.Button();
-            this.btnTreeNivel2 = new System.Windows.Forms.Button();
+            this.btnNivel2 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.lblContenido = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -42,15 +43,17 @@
             this.btnTreeNivel1.TabIndex = 0;
             this.btnTreeNivel1.Text = "Nivel 1";
             this.btnTreeNivel1.UseVisualStyleBackColor = true;
+            this.btnTreeNivel1.Click += new System.EventHandler(this.btnTreeNivel1_Click);
             // 
-            // btnTreeNivel2
+            // btnNivel2
             // 
-            this.btnTreeNivel2.Location = new System.Drawing.Point(60, 58);
-            this.btnTreeNivel2.Name = "btnTreeNivel2";
-            this.btnTreeNivel2.Size = new System.Drawing.Size(75, 23);
-            this.btnTreeNivel2.TabIndex = 1;
-            this.btnTreeNivel2.Text = "Nivel 2";
-            this.btnTreeNivel2.UseVisualStyleBackColor = true;
+            this.btnNivel2.Location = new System.Drawing.Point(60, 58);
+            this.btnNivel2.Name = "btnNivel2";
+            this.btnNivel2.Size = new System.Drawing.Size(75, 23);
+            this.btnNivel2.TabIndex = 1;
+            this.btnNivel2.Text = "Nivel 2";
+            this.btnNivel2.UseVisualStyleBackColor = true;
+            this.btnNivel2.Click += new System.EventHandler(this.btnNivel2_Click);
             // 
             // treeView1
             // 
@@ -76,10 +79,12 @@
             this.ClientSize = new System.Drawing.Size(775, 450);
             this.Controls.Add(this.lblContenido);
             this.Controls.Add(this.treeView1);
-            this.Controls.Add(this.btnTreeNivel2);
+            this.Controls.Add(this.btnNivel2);
             this.Controls.Add(this.btnTreeNivel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistroProveedorSeguro";
             this.Text = "Registro De Proveedores De Seguro";
+            this.Load += new System.EventHandler(this.FrmRegistroProveedorSeguro_Load);
             this.ResumeLayout(false);
 
         }
@@ -87,7 +92,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnTreeNivel1;
-        private System.Windows.Forms.Button btnTreeNivel2;
+        private System.Windows.Forms.Button btnNivel2;
         private System.Windows.Forms.TreeView treeView1;
         private System.Windows.Forms.Label lblContenido;
     }
