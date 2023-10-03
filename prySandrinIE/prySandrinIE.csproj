@@ -76,6 +76,12 @@
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRegistroProveedorSeguro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistroProveedorSeguro.Designer.cs">
+      <DependentUpon>FrmRegistroProveedorSeguro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCargaProveedores.resx">
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistroProveedorSeguro.resx">
+      <DependentUpon>FrmRegistroProveedorSeguro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

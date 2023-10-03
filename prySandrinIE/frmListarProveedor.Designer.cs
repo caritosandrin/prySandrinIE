@@ -38,6 +38,9 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblMostrar = new System.Windows.Forms.Label();
+            this.lblNumero = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.TextBox();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,9 +56,9 @@
             this.Column7,
             this.Column8,
             this.Column4});
-            this.dataGridView1.Location = new System.Drawing.Point(2, 240);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 67);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(807, 126);
+            this.dataGridView1.Size = new System.Drawing.Size(775, 165);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -104,15 +107,45 @@
             this.lblMostrar.AutoSize = true;
             this.lblMostrar.Location = new System.Drawing.Point(24, 34);
             this.lblMostrar.Name = "lblMostrar";
-            this.lblMostrar.Size = new System.Drawing.Size(35, 13);
+            this.lblMostrar.Size = new System.Drawing.Size(0, 13);
             this.lblMostrar.TabIndex = 12;
-            this.lblMostrar.Text = "label1";
+            // 
+            // lblNumero
+            // 
+            this.lblNumero.AutoSize = true;
+            this.lblNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumero.Location = new System.Drawing.Point(24, 29);
+            this.lblNumero.Name = "lblNumero";
+            this.lblNumero.Size = new System.Drawing.Size(62, 15);
+            this.lblNumero.TabIndex = 13;
+            this.lblNumero.Text = "Numero:";
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Location = new System.Drawing.Point(92, 27);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(100, 20);
+            this.txtNumero.TabIndex = 14;
+            // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.Location = new System.Drawing.Point(712, 25);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(75, 23);
+            this.btnRegistrar.TabIndex = 15;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.UseVisualStyleBackColor = true;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click_1);
             // 
             // frmListarProveedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(850, 342);
+            this.Controls.Add(this.btnRegistrar);
+            this.Controls.Add(this.txtNumero);
+            this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmListarProveedor";
@@ -135,5 +168,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label lblMostrar;
+        private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.Button btnRegistrar;
     }
 }

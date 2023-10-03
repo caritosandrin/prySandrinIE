@@ -34,7 +34,7 @@ namespace prySandrinIE
 
             rutaArchivo =informacionCarpetas.FullName;
 
-            rutaArchivo += "\\baseDatos\\ Listado de aseguradores.csv";
+            rutaArchivo += "\\baseDatos\\Listado de aseguradores.csv";
 
             objetoLectorArchivo = new StreamReader(rutaArchivo);
 
@@ -52,16 +52,16 @@ namespace prySandrinIE
 
         private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            lblDatos.Text = "hizo doble click";
+            lblNº.Text = "hizo doble click";
 
-            txtN.Text = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txtEntidad.Text = dgvDatos.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtApertura.Text = dgvDatos.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtExpte.Text = dgvDatos.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtJuzgado.Text = dgvDatos.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtJurisdiccion.Text = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txtDireccion.Text = dgvDatos.Rows[e.RowIndex].Cells[7].Value.ToString();
-            txtLiquidador.Text = dgvDatos.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txtN.Text = dgvDatos.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtEntidad.Text = dgvDatos.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtApertura.Text = dgvDatos.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtExpte.Text = dgvDatos.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtJuzgado.Text = dgvDatos.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtJurisdiccion.Text = dgvDatos.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txtDireccion.Text = dgvDatos.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txtLiquidador.Text = dgvDatos.Rows[e.RowIndex].Cells[7].Value.ToString();
 
 
         }

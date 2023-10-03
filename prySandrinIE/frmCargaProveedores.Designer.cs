@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblDatos = new System.Windows.Forms.Label();
+            this.lblNº = new System.Windows.Forms.Label();
             this.dgvDatos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,16 +47,24 @@
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.txtLiquidador = new System.Windows.Forms.TextBox();
             this.btnGrabar = new System.Windows.Forms.Button();
+            this.lblEntidad = new System.Windows.Forms.Label();
+            this.lblApertura = new System.Windows.Forms.Label();
+            this.lblExpte = new System.Windows.Forms.Label();
+            this.lblJuzgado = new System.Windows.Forms.Label();
+            this.lblJurusdiccion = new System.Windows.Forms.Label();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.lblLiquidador = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
             this.SuspendLayout();
             // 
-            // lblDatos
+            // lblNº
             // 
-            this.lblDatos.Location = new System.Drawing.Point(61, 41);
-            this.lblDatos.Name = "lblDatos";
-            this.lblDatos.Size = new System.Drawing.Size(484, 180);
-            this.lblDatos.TabIndex = 0;
-            this.lblDatos.Text = "label1";
+            this.lblNº.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNº.Location = new System.Drawing.Point(2, 9);
+            this.lblNº.Name = "lblNº";
+            this.lblNº.Size = new System.Drawing.Size(63, 21);
+            this.lblNº.TabIndex = 0;
+            this.lblNº.Text = "Nª";
             // 
             // dgvDatos
             // 
@@ -70,10 +78,10 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvDatos.Location = new System.Drawing.Point(12, 209);
+            this.dgvDatos.Location = new System.Drawing.Point(269, 12);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDatos.Size = new System.Drawing.Size(757, 179);
+            this.dgvDatos.Size = new System.Drawing.Size(854, 242);
             this.dgvDatos.TabIndex = 1;
             this.dgvDatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellContentClick);
             this.dgvDatos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDatos_CellDoubleClick);
@@ -120,76 +128,154 @@
             // 
             // txtN
             // 
-            this.txtN.Location = new System.Drawing.Point(-2, 147);
+            this.txtN.Location = new System.Drawing.Point(109, 6);
             this.txtN.Name = "txtN";
-            this.txtN.Size = new System.Drawing.Size(100, 20);
+            this.txtN.Size = new System.Drawing.Size(129, 20);
             this.txtN.TabIndex = 2;
             this.txtN.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtEntidad
             // 
-            this.txtEntidad.Location = new System.Drawing.Point(94, 147);
+            this.txtEntidad.Location = new System.Drawing.Point(109, 32);
             this.txtEntidad.Name = "txtEntidad";
-            this.txtEntidad.Size = new System.Drawing.Size(100, 20);
+            this.txtEntidad.Size = new System.Drawing.Size(129, 20);
             this.txtEntidad.TabIndex = 3;
             // 
             // txtApertura
             // 
-            this.txtApertura.Location = new System.Drawing.Point(190, 147);
+            this.txtApertura.Location = new System.Drawing.Point(109, 58);
             this.txtApertura.Name = "txtApertura";
-            this.txtApertura.Size = new System.Drawing.Size(100, 20);
+            this.txtApertura.Size = new System.Drawing.Size(129, 20);
             this.txtApertura.TabIndex = 4;
             // 
             // txtExpte
             // 
-            this.txtExpte.Location = new System.Drawing.Point(286, 147);
+            this.txtExpte.Location = new System.Drawing.Point(109, 84);
             this.txtExpte.Name = "txtExpte";
-            this.txtExpte.Size = new System.Drawing.Size(100, 20);
+            this.txtExpte.Size = new System.Drawing.Size(129, 20);
             this.txtExpte.TabIndex = 5;
             // 
             // txtJuzgado
             // 
-            this.txtJuzgado.Location = new System.Drawing.Point(382, 147);
+            this.txtJuzgado.Location = new System.Drawing.Point(109, 110);
             this.txtJuzgado.Name = "txtJuzgado";
-            this.txtJuzgado.Size = new System.Drawing.Size(100, 20);
+            this.txtJuzgado.Size = new System.Drawing.Size(129, 20);
             this.txtJuzgado.TabIndex = 6;
             // 
             // txtJurisdiccion
             // 
-            this.txtJurisdiccion.Location = new System.Drawing.Point(478, 147);
+            this.txtJurisdiccion.Location = new System.Drawing.Point(109, 136);
             this.txtJurisdiccion.Name = "txtJurisdiccion";
-            this.txtJurisdiccion.Size = new System.Drawing.Size(100, 20);
+            this.txtJurisdiccion.Size = new System.Drawing.Size(129, 20);
             this.txtJurisdiccion.TabIndex = 7;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(573, 147);
+            this.txtDireccion.Location = new System.Drawing.Point(109, 162);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(100, 20);
+            this.txtDireccion.Size = new System.Drawing.Size(129, 20);
             this.txtDireccion.TabIndex = 8;
             // 
             // txtLiquidador
             // 
-            this.txtLiquidador.Location = new System.Drawing.Point(669, 147);
+            this.txtLiquidador.Location = new System.Drawing.Point(109, 188);
             this.txtLiquidador.Name = "txtLiquidador";
-            this.txtLiquidador.Size = new System.Drawing.Size(100, 20);
+            this.txtLiquidador.Size = new System.Drawing.Size(129, 20);
             this.txtLiquidador.TabIndex = 9;
             // 
             // btnGrabar
             // 
-            this.btnGrabar.Location = new System.Drawing.Point(632, 415);
+            this.btnGrabar.Location = new System.Drawing.Point(136, 225);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(75, 23);
+            this.btnGrabar.Size = new System.Drawing.Size(102, 29);
             this.btnGrabar.TabIndex = 10;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = true;
             this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
+            // lblEntidad
+            // 
+            this.lblEntidad.AutoSize = true;
+            this.lblEntidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEntidad.Location = new System.Drawing.Point(2, 39);
+            this.lblEntidad.Name = "lblEntidad";
+            this.lblEntidad.Size = new System.Drawing.Size(60, 15);
+            this.lblEntidad.TabIndex = 11;
+            this.lblEntidad.Text = "Entidad:";
+            // 
+            // lblApertura
+            // 
+            this.lblApertura.AutoSize = true;
+            this.lblApertura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApertura.Location = new System.Drawing.Point(2, 61);
+            this.lblApertura.Name = "lblApertura";
+            this.lblApertura.Size = new System.Drawing.Size(65, 15);
+            this.lblApertura.TabIndex = 12;
+            this.lblApertura.Text = "Apertura:";
+            // 
+            // lblExpte
+            // 
+            this.lblExpte.AutoSize = true;
+            this.lblExpte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpte.Location = new System.Drawing.Point(2, 91);
+            this.lblExpte.Name = "lblExpte";
+            this.lblExpte.Size = new System.Drawing.Size(66, 15);
+            this.lblExpte.TabIndex = 13;
+            this.lblExpte.Text = "Nª Expte:";
+            // 
+            // lblJuzgado
+            // 
+            this.lblJuzgado.AutoSize = true;
+            this.lblJuzgado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJuzgado.Location = new System.Drawing.Point(2, 117);
+            this.lblJuzgado.Name = "lblJuzgado";
+            this.lblJuzgado.Size = new System.Drawing.Size(65, 15);
+            this.lblJuzgado.TabIndex = 14;
+            this.lblJuzgado.Text = "Juzgado:";
+            // 
+            // lblJurusdiccion
+            // 
+            this.lblJurusdiccion.AutoSize = true;
+            this.lblJurusdiccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJurusdiccion.Location = new System.Drawing.Point(-1, 143);
+            this.lblJurusdiccion.Name = "lblJurusdiccion";
+            this.lblJurusdiccion.Size = new System.Drawing.Size(88, 15);
+            this.lblJurusdiccion.TabIndex = 15;
+            this.lblJurusdiccion.Text = "Jurisdiccion:";
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDireccion.Location = new System.Drawing.Point(-1, 165);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(72, 15);
+            this.lblDireccion.TabIndex = 16;
+            this.lblDireccion.Text = "Direccion:";
+            // 
+            // lblLiquidador
+            // 
+            this.lblLiquidador.AutoSize = true;
+            this.lblLiquidador.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLiquidador.Location = new System.Drawing.Point(1, 195);
+            this.lblLiquidador.Name = "lblLiquidador";
+            this.lblLiquidador.Size = new System.Drawing.Size(80, 15);
+            this.lblLiquidador.TabIndex = 17;
+            this.lblLiquidador.Text = "Liquidador:";
+            // 
             // frmCargaProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1135, 298);
+            this.Controls.Add(this.lblLiquidador);
+            this.Controls.Add(this.lblDireccion);
+            this.Controls.Add(this.lblJurusdiccion);
+            this.Controls.Add(this.lblJuzgado);
+            this.Controls.Add(this.lblExpte);
+            this.Controls.Add(this.lblApertura);
+            this.Controls.Add(this.lblEntidad);
             this.Controls.Add(this.btnGrabar);
             this.Controls.Add(this.txtLiquidador);
             this.Controls.Add(this.txtDireccion);
@@ -200,7 +286,7 @@
             this.Controls.Add(this.txtEntidad);
             this.Controls.Add(this.txtN);
             this.Controls.Add(this.dgvDatos);
-            this.Controls.Add(this.lblDatos);
+            this.Controls.Add(this.lblNº);
             this.Name = "frmCargaProveedores";
             this.Text = "Carga Proveedores";
             this.Load += new System.EventHandler(this.frmCargaProveedores_Load);
@@ -212,7 +298,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label lblDatos;
+        private System.Windows.Forms.Label lblNº;
         private System.Windows.Forms.DataGridView dgvDatos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -231,5 +317,12 @@
         private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.TextBox txtLiquidador;
         private System.Windows.Forms.Button btnGrabar;
+        private System.Windows.Forms.Label lblEntidad;
+        private System.Windows.Forms.Label lblApertura;
+        private System.Windows.Forms.Label lblExpte;
+        private System.Windows.Forms.Label lblJuzgado;
+        private System.Windows.Forms.Label lblJurusdiccion;
+        private System.Windows.Forms.Label lblDireccion;
+        private System.Windows.Forms.Label lblLiquidador;
     }
 }
