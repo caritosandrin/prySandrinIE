@@ -100,7 +100,10 @@ namespace prySandrinIE
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            dgvDatos.Rows.Clear();
+            foreach ( DataGridViewRow row in dgvDatos.SelectedRows)
+            {
+                dgvDatos.Rows.Remove(row);
+            }
         }
     }
 }

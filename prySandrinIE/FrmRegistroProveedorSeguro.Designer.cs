@@ -32,52 +32,54 @@
             this.btnTreeNivel1 = new System.Windows.Forms.Button();
             this.btnNivel2 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.lblContenido = new System.Windows.Forms.Label();
+            this.lblMostrar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTreeNivel1
             // 
-            this.btnTreeNivel1.Location = new System.Drawing.Point(60, 13);
+            this.btnTreeNivel1.Location = new System.Drawing.Point(12, 83);
             this.btnTreeNivel1.Name = "btnTreeNivel1";
-            this.btnTreeNivel1.Size = new System.Drawing.Size(75, 23);
+            this.btnTreeNivel1.Size = new System.Drawing.Size(108, 23);
             this.btnTreeNivel1.TabIndex = 0;
-            this.btnTreeNivel1.Text = "Nivel 1";
+            this.btnTreeNivel1.Text = "Ocultar Carpetas";
             this.btnTreeNivel1.UseVisualStyleBackColor = true;
             this.btnTreeNivel1.Click += new System.EventHandler(this.btnTreeNivel1_Click);
             // 
             // btnNivel2
             // 
-            this.btnNivel2.Location = new System.Drawing.Point(60, 58);
+            this.btnNivel2.Location = new System.Drawing.Point(12, 35);
             this.btnNivel2.Name = "btnNivel2";
-            this.btnNivel2.Size = new System.Drawing.Size(75, 23);
+            this.btnNivel2.Size = new System.Drawing.Size(108, 23);
             this.btnNivel2.TabIndex = 1;
-            this.btnNivel2.Text = "Nivel 2";
+            this.btnNivel2.Text = "Mostrar Carpetas";
             this.btnNivel2.UseVisualStyleBackColor = true;
             this.btnNivel2.Click += new System.EventHandler(this.btnNivel2_Click);
             // 
             // treeView1
             // 
-            this.treeView1.Location = new System.Drawing.Point(29, 120);
+            this.treeView1.Location = new System.Drawing.Point(12, 147);
             this.treeView1.Name = "treeView1";
-            this.treeView1.Size = new System.Drawing.Size(189, 214);
+            this.treeView1.Size = new System.Drawing.Size(210, 258);
             this.treeView1.TabIndex = 2;
+            this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
+            this.treeView1.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView1_NodeMouseDoubleClick_1);
             // 
-            // lblContenido
+            // lblMostrar
             // 
-            this.lblContenido.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblContenido.Location = new System.Drawing.Point(280, 13);
-            this.lblContenido.Name = "lblContenido";
-            this.lblContenido.Size = new System.Drawing.Size(290, 363);
-            this.lblContenido.TabIndex = 3;
-            this.lblContenido.Click += new System.EventHandler(this.lblContenido_Click);
+            this.lblMostrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.lblMostrar.Location = new System.Drawing.Point(280, 40);
+            this.lblMostrar.Name = "lblMostrar";
+            this.lblMostrar.Size = new System.Drawing.Size(290, 365);
+            this.lblMostrar.TabIndex = 3;
+            this.lblMostrar.Click += new System.EventHandler(this.lblContenido_Click);
             // 
             // FrmRegistroProveedorSeguro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(775, 450);
-            this.Controls.Add(this.lblContenido);
+            this.ClientSize = new System.Drawing.Size(676, 450);
+            this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnNivel2);
             this.Controls.Add(this.btnTreeNivel1);
@@ -94,6 +96,6 @@
         private System.Windows.Forms.Button btnTreeNivel1;
         private System.Windows.Forms.Button btnNivel2;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Label lblContenido;
+        private System.Windows.Forms.Label lblMostrar;
     }
 }

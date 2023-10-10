@@ -23,9 +23,11 @@ namespace prySandrinIE
         {
             treeView1.Nodes.Clear();
 
+            rutaCarpetaRaiz = rutaCarpetaRaiz + "\\Proveedor";
+
             if (Directory.Exists(rutaCarpetaRaiz))
             {
-                TreeNode nodoRaiz = new TreeNode(nombreCarpeta);
+                TreeNode nodoRaiz = new TreeNode("Proveedor");
                 treeView1.Nodes.Add(nodoRaiz);
                 TraerSubCarpetas(rutaCarpetaRaiz, nodoRaiz);
                 TraerArchivos(rutaCarpetaRaiz, nodoRaiz);
@@ -72,17 +74,41 @@ namespace prySandrinIE
 
         private void FrmRegistroProveedorSeguro_Load(object sender, EventArgs e)
         {
-
+            DirectoryInfo info = new DirectoryInfo(@"../..");
+            CargarTreeView(info.FullName, info.Name);
         }
         private void treeView1_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            lblContenido.Text = "";
+           
+
+        }
+        private void btnTreeNivel1_Click(object sender, EventArgs e)
+        {
+            //una direcciòn estàtica de carpeta
+            DirectoryInfo info = new DirectoryInfo("C:\\Users\\Alumno\\source\\repos\\prySandrinIE\\prySandrinIE\\Proveedor\\Proveedores");
+
+            CargarTreeView(info.FullName, info.Name);
+        }
+
+        private void btnNivel2_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+
+        }
+
+        private void treeView1_NodeMouseDoubleClick_1(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            lblMostrar.Text = "";
 
             try
             {
                 DirectoryInfo info = new DirectoryInfo(@"../..");
 
-                string rutaArchivo = info.FullName + "\\" + e.Node.Text;
+                string rutaArchivo = info.FullName + "\\" + e.Node.FullPath;
 
                 StreamReader lectorArchivos = new StreamReader(rutaArchivo);
 
@@ -90,7 +116,7 @@ namespace prySandrinIE
                 {
                     while (!lectorArchivos.EndOfStream)
                     {
-                        lblContenido.Text += lectorArchivos.ReadLine();
+                        lblMostrar.Text += lectorArchivos.ReadLine();
                     }
                 }
 
@@ -100,21 +126,6 @@ namespace prySandrinIE
             {
 
             }
-
-        }
-        private void btnTreeNivel1_Click(object sender, EventArgs e)
-        {
-            //una direcciòn estàtica de carpeta
-            DirectoryInfo info = new DirectoryInfo("C:\\Users\\Alumnos\\source\\repos\\pryCasaleIE\\pryCasaleIE");
-
-            CargarTreeView(info.FullName, info.Name);
-        }
-
-        private void btnNivel2_Click(object sender, EventArgs e)
-        {
-            DirectoryInfo info = new DirectoryInfo(@"../../");
-            string ruta = info.FullName + "Proveedores";
-            CargarTreeView(ruta, info.Name);
         }
     }
 }
