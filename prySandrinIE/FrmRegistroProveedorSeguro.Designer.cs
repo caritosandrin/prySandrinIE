@@ -67,7 +67,7 @@
             // lblMostrar
             // 
             this.lblMostrar.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.lblMostrar.Location = new System.Drawing.Point(280, 40);
+            this.lblMostrar.Location = new System.Drawing.Point(344, 9);
             this.lblMostrar.Name = "lblMostrar";
             this.lblMostrar.Size = new System.Drawing.Size(290, 365);
             this.lblMostrar.TabIndex = 3;
@@ -78,7 +78,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(676, 450);
+            this.ClientSize = new System.Drawing.Size(655, 450);
             this.Controls.Add(this.lblMostrar);
             this.Controls.Add(this.treeView1);
             this.Controls.Add(this.btnNivel2);

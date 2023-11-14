@@ -16,7 +16,7 @@ namespace prySandrinIE
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmlogo());
+            Application.Run(new FrmIniciarSesion());
         }
     }
 }
