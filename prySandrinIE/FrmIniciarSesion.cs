@@ -13,47 +13,37 @@ namespace prySandrinIE
 {
     public partial class FrmIniciarSesion : Form
     {
-        public FrmIniciarSesion()
-        {
-            InitializeComponent();
-        }
         
+        
+        clsBasedeDatos objAcceso = new clsBasedeDatos();
+
+        Int32 IntentosFallidos = 0;
 
         private void btnConectar_Click(object sender, EventArgs e)
         {
-            //Declaraciòn de variable y objetos globales
-            OleDbConnection conexionBD = new OleDbConnection();
-            OleDbCommand comandarBD = new OleDbCommand();
-            OleDbDataReader BDDataReader;
-
-
-            string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;" +
-                "Data Source="+@"../../BaseDatos.accdb";
-
-            conexionBD.ConnectionString = cadenaConexion;
-            conexionBD.Open();
-            
-            comandarBD.Connection = conexionBD;
-            comandarBD.CommandType = CommandType.TableDirect;
-            comandarBD.CommandText = "Users";
-
-            BDDataReader = comandarBD.ExecuteReader();
-
-            while (BDDataReader.Read())
+             if (objAcceso.ValidarUsuarios(txtNombreUsuario.Text, txtContraseña.Text) == true)
             {
-                if (BDDataReader[1].ToString()==txtUsuario.Text)
+                frmLogo fb = new frmLogo();
+                fb.ShowDialog();
+                frmInicioSesion fin = new frmInicioSesion();
+                fin.Close();
+                IntentosFallidos = 0;
+            }
+            else
+            {
+                MessageBox.Show("El usuario o la contraseña ingresada es incorrecta");
+                txtNombreUsuario.Text = "";
+                txtContraseña.Text = "";
+                IntentosFallidos++;
+                if (IntentosFallidos >= 3)
                 {
-                    if (BDDataReader[2].ToString() == txtContraseña.Text)
-                    {
-                        MessageBox.Show("Encontrado");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Contraseña incorrecta.");
-                    }
+                    btnIniciarSesion.Enabled = false;
+                    MessageBox.Show("Alcanzó el límite máximo de intentos");
                 }
             }
         }
+            
+           
 
         private void btnTraer_Click(object sender, EventArgs e)
         {
@@ -62,12 +52,39 @@ namespace prySandrinIE
 
         private void FrmIniciarSesion_Load(object sender, EventArgs e)
         {
-
+            objAcceso.ConectarBaseDatos();
+            txtContraseña.PasswordChar = '*';
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRegistrarse_Click(object sender, EventArgs e)
+        {
+            frmRegistrarse fr = new frmRegistrarse();
+            fr.ShowDialog();
+        }
+    }
+
+    internal class frmInicioSesion
+    {
+        internal void Close()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    internal class frmLogo
+    {
+        public frmLogo()
+        {
+        }
+
+        internal void ShowDialog()
+        {
+            throw new NotImplementedException();
         }
     }
 }

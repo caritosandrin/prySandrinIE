@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;//usar stream
 
 
 namespace prySandrinIE
@@ -57,7 +57,7 @@ namespace prySandrinIE
 
         private void frmlogo_Load(object sender, EventArgs e)
         {
-
+            reloj.Enabled = true;
         }
     }
 }

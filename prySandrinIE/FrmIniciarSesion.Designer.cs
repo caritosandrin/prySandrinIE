@@ -29,13 +29,13 @@ namespace prySandrinIE
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIniciarSesion));
             this.LblUsuario = new System.Windows.Forms.Label();
             this.lblContraseña = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.btnIniciar = new System.Windows.Forms.Button();
-            this.lblUsuarios = new System.Windows.Forms.Label();
-            this.cboUsers = new System.Windows.Forms.ComboBox();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LblUsuario
@@ -58,13 +58,13 @@ namespace prySandrinIE
             this.lblContraseña.TabIndex = 1;
             this.lblContraseña.Text = "Contraseña:";
             // 
-            // txtUsuario
+            // txtNombreUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(99, 13);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 2;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(99, 13);
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtNombreUsuario.TabIndex = 2;
+            this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContraseña
             // 
@@ -74,47 +74,39 @@ namespace prySandrinIE
             this.txtContraseña.TabIndex = 3;
             this.txtContraseña.UseSystemPasswordChar = true;
             // 
-            // btnIniciar
+            // btnIniciarSesion
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(12, 160);
-            this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(129, 37);
-            this.btnIniciar.TabIndex = 4;
-            this.btnIniciar.Text = "Iniciar Sesion\r\n";
-            this.btnIniciar.UseVisualStyleBackColor = true;
-            this.btnIniciar.Click += new System.EventHandler(this.btnConectar_Click);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(12, 136);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(129, 37);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "Iniciar Sesion\r\n";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnConectar_Click);
             // 
-            // lblUsuarios
+            // btnRegistrarse
             // 
-            this.lblUsuarios.AutoSize = true;
-            this.lblUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsuarios.Location = new System.Drawing.Point(7, 256);
-            this.lblUsuarios.Name = "lblUsuarios";
-            this.lblUsuarios.Size = new System.Drawing.Size(68, 15);
-            this.lblUsuarios.TabIndex = 6;
-            this.lblUsuarios.Text = "Usuarios:";
-            // 
-            // cboUsers
-            // 
-            this.cboUsers.FormattingEnabled = true;
-            this.cboUsers.Location = new System.Drawing.Point(81, 255);
-            this.cboUsers.Name = "cboUsers";
-            this.cboUsers.Size = new System.Drawing.Size(121, 21);
-            this.cboUsers.TabIndex = 7;
+            this.btnRegistrarse.Location = new System.Drawing.Point(190, 136);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(129, 36);
+            this.btnRegistrarse.TabIndex = 5;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = true;
+            this.btnRegistrarse.Click += new System.EventHandler(this.btnRegistrarse_Click);
             // 
             // FrmIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(373, 321);
-            this.Controls.Add(this.cboUsers);
-            this.Controls.Add(this.lblUsuarios);
-            this.Controls.Add(this.btnIniciar);
+            this.ClientSize = new System.Drawing.Size(373, 215);
+            this.Controls.Add(this.btnRegistrarse);
+            this.Controls.Add(this.btnIniciarSesion);
             this.Controls.Add(this.txtContraseña);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtNombreUsuario);
             this.Controls.Add(this.lblContraseña);
             this.Controls.Add(this.LblUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIniciarSesion";
             this.Text = "Iniciar Sesion";
             this.Load += new System.EventHandler(this.FrmIniciarSesion_Load);
@@ -127,10 +119,9 @@ namespace prySandrinIE
 
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Label lblContraseña;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
-        private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Label lblUsuarios;
-        private System.Windows.Forms.ComboBox cboUsers;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnRegistrarse;
     }
 }
