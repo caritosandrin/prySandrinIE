@@ -43,7 +43,14 @@ namespace prySandrinIE
             {
                 if (BDDataReader[1].ToString()==txtUsuario.Text)
                 {
-                    MessageBox.Show("encontras");
+                    if (BDDataReader[2].ToString() == txtContraseña.Text)
+                    {
+                        MessageBox.Show("Encontrado");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Contraseña incorrecta.");
+                    }
                 }
             }
         }
@@ -54,6 +61,11 @@ namespace prySandrinIE
         }
 
         private void FrmIniciarSesion_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
         }

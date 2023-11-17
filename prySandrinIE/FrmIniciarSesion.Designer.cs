@@ -34,7 +34,6 @@ namespace prySandrinIE
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtContraseña = new System.Windows.Forms.TextBox();
             this.btnIniciar = new System.Windows.Forms.Button();
-            this.btnTraer = new System.Windows.Forms.Button();
             this.lblUsuarios = new System.Windows.Forms.Label();
             this.cboUsers = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -65,6 +64,7 @@ namespace prySandrinIE
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtUsuario.TabIndex = 2;
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
             // txtContraseña
             // 
@@ -72,26 +72,17 @@ namespace prySandrinIE
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(100, 20);
             this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.UseSystemPasswordChar = true;
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(15, 122);
+            this.btnIniciar.Location = new System.Drawing.Point(12, 160);
             this.btnIniciar.Name = "btnIniciar";
-            this.btnIniciar.Size = new System.Drawing.Size(75, 53);
+            this.btnIniciar.Size = new System.Drawing.Size(129, 37);
             this.btnIniciar.TabIndex = 4;
             this.btnIniciar.Text = "Iniciar Sesion\r\n";
             this.btnIniciar.UseVisualStyleBackColor = true;
             this.btnIniciar.Click += new System.EventHandler(this.btnConectar_Click);
-            // 
-            // btnTraer
-            // 
-            this.btnTraer.Location = new System.Drawing.Point(149, 122);
-            this.btnTraer.Name = "btnTraer";
-            this.btnTraer.Size = new System.Drawing.Size(88, 53);
-            this.btnTraer.TabIndex = 5;
-            this.btnTraer.Text = "Traer Informacion de USERS\r\n";
-            this.btnTraer.UseVisualStyleBackColor = true;
-            this.btnTraer.Click += new System.EventHandler(this.btnTraer_Click);
             // 
             // lblUsuarios
             // 
@@ -119,7 +110,6 @@ namespace prySandrinIE
             this.ClientSize = new System.Drawing.Size(373, 321);
             this.Controls.Add(this.cboUsers);
             this.Controls.Add(this.lblUsuarios);
-            this.Controls.Add(this.btnTraer);
             this.Controls.Add(this.btnIniciar);
             this.Controls.Add(this.txtContraseña);
             this.Controls.Add(this.txtUsuario);
@@ -140,7 +130,6 @@ namespace prySandrinIE
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.TextBox txtContraseña;
         private System.Windows.Forms.Button btnIniciar;
-        private System.Windows.Forms.Button btnTraer;
         private System.Windows.Forms.Label lblUsuarios;
         private System.Windows.Forms.ComboBox cboUsers;
     }
