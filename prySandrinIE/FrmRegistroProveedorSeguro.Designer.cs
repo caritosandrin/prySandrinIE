@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnTreeNivel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRegistroProveedorSeguro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro De Proveedores De Seguro";
             this.Load += new System.EventHandler(this.FrmRegistroProveedorSeguro_Load);
             this.ResumeLayout(false);

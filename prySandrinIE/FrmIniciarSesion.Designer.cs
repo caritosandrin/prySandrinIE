@@ -108,6 +108,7 @@ namespace prySandrinIE
             this.Controls.Add(this.LblUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIniciarSesion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Iniciar Sesion";
             this.Load += new System.EventHandler(this.FrmIniciarSesion_Load);
             this.ResumeLayout(false);

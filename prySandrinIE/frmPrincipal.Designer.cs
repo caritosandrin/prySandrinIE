@@ -67,7 +67,7 @@
             // verListaDePreciosToolStripMenuItem
             // 
             this.verListaDePreciosToolStripMenuItem.Name = "verListaDePreciosToolStripMenuItem";
-            this.verListaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.verListaDePreciosToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.verListaDePreciosToolStripMenuItem.Text = "Ver lista de precios";
             this.verListaDePreciosToolStripMenuItem.Click += new System.EventHandler(this.verListaDePreciosToolStripMenuItem_Click);
             // 
@@ -88,6 +88,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema de Gestión de Ventas - Seguros";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
